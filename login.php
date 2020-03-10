@@ -1,8 +1,8 @@
 <?php
 $con=mysqli_connect("127.0.0.1","root","root","web1"); //连接数据库，且定位到数据库web1
 if(!$con){die("error:".mysqli_connect_error());} //如果连接失败就报错并且中断程序
-$user=$_POST['user'];
-$pass=$_POST['pass'];
+$user=$_GET['user'];
+$pass=$_GET['pass'];
 if($user==null||$pass==null){
     echo "<script>alert('你不是管理员吧！')</script>";
     die("账号和密码不能为空!");
